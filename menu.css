@@ -1,0 +1,46 @@
+.menu-texto{
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+}
+.menu{
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.menu-imagem{
+    display: block;
+    object-fit: cover;
+    object-position: 0 -300px;
+}
+.menu-titulo{
+    font-size: 4em;
+    font-weight: 300;
+}
+.menu-paragrafo{
+    font-size: 1.5em;
+    font-weight: 300;
+    padding: 5% 0;
+}
+.tabela-titulo{
+    text-align: center;
+}
+.tabela {
+    margin: 5% 20%;
+}
+.tabela-box{
+    border: 1px solid black;
+    display: flex;
+    gap: 5em;
+    padding: 2% 3%;
+}
+strong{
+    text-transform: uppercase;
+}
+.tabela-preco{
+    text-wrap: nowrap;
+}

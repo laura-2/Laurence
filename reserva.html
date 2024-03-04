@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reserva.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Reserva</title>
+</head>
+<body>
+    <div class="mesa">
+            <img src="./img/mesa.jpg" alt="Imagem de uma mesa" height="500" width="100%" class="mesa-imagem"/>
+            <div class="mesa-texto">
+                <h1 class="mesa-titulo">Reservas</h1>
+                <p class="mesa-paragrafo">Fazemos reservas com até um mês de antecedência para festas com até dez convidados.</p>
+            </div>
+    </div>
+    <form action="/"  method="post" class="mesa-formulario" id="formulario">
+        <div class="formulario">
+            <label for="nome" class="formulario-texto">Nome:</label>
+            <input class="formulario-input" type="text" name="nome" minlength="2" maxlength="10" required
+            placeholder="Digite seu nome" oninput="nomeValidate()"/>
+            <span class="formulario-msg">Esse campo é obrigatório.</span>
+        </div>
+        <div class="formulario">
+            <label for="sobrenome" class="formulario-texto">Sobrenome:</label>
+            <input class="formulario-input" type="text" name="sobrenome" maxlength="30"
+            placeholder="Digite seu sobrenome"/>
+            <span class="formulario-msg">Esse campo deve conter no máximo 30 caracteres.</span>
+        </div>
+        <div class="formulario">
+            <label for="telefone" class="formulario-texto">Telefone para contato:</label>
+            <input class="formulario-input" type="tel" name="telefone" max="15" required
+            placeholder="Ex: (41) 99522-0919" oninput="telefoneValidate()"/>
+            <span class="formulario-msg">Apenas números!</span>
+        </div>
+        <div class="formulario">
+            <label for="pessoas" class="formulario-texto">Número de pessoas:</label>
+            <input class="formulario-input" type="number" name="pessoas" min="1" max="20" required
+            placeholder="Ex: 5" oninput="pessoasValidate()"/>
+            <span class="formulario-msg">Esse campo é obrigatório.</span>
+        </div>
+        <div class="formulario">
+            <label for="data" class="formulario-texto">Data da reserva:</label>
+            <input class="formulario-input" type="date" name="data" required 
+            oninput="dataValidate()"/>
+            <span class="formulario-msg">Escolha uma data futura.</span>
+        </div>
+        
+        <div class="formulario">
+            <label for="horario" class="formulario-texto">Hora:</label>
+            <input class="formulario-input" type="time" name="horario" required
+            oninput="horarioValidate()"/>
+            <span class="formulario-msg">Escolha um horário disponível</span>
+        </div>
+        <button class="formulario-botao" type="submit">Enviar</button>
+        <p id="formulario-success">Reserva confirmada!</p>
+    </form>
+    <footer class="rodape" id="localizacao">
+        <div>
+            <h1 class="rodape-titulo">Localização</h1>
+        </div>
+        <div class="rodape-tabela">
+            <div class="rodape-tabela-itens">
+                <h6 class="itens-titulo">BROOKLYN</h6>
+                <p class="itens-texto">Rua Exemplo, 123 <br>
+                    São Paulo, SP 12345-000
+                    <br><br>
+                    (555) 555-5555
+                    <br><br>
+                    De segunda a domingo <br>
+                    Das 10h às 22h</p>
+            </div>
+            <div class="rodape-tabela-itens">
+                <h6 class="itens-titulo">QUEENS</h6>
+                <p class="itens-texto">Rua Exemplo, 123 <br>
+                    São Paulo, SP 12345-000
+                    <br><br>
+                    (555) 555-5555
+                    <br><br>
+                    De segunda a domingo <br>
+                    Das 10h às 22h</p>
+            </div>
+            <div class="rodape-tabela-itens">
+                <h6 class="itens-titulo">FOOD TRUCK</h6>
+                <p class="itens-texto">Rua Exemplo, 123 <br>
+                    São Paulo, SP 12345-000
+                    <br><br>
+                    (555) 555-5555
+                    <br><br>
+                    De segunda a quinta-feira<br>
+                    Das 13h às 19h</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./main.js"></script>
+</html>
